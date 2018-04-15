@@ -4,7 +4,7 @@ services:
   app:
     build: .
     image: example
-    command: amber watch
+    command: bin/amber watch
     environment:
       DATABASE_URL: postgres://admin:password@db:5432/example_development
     ports:
@@ -18,7 +18,7 @@ services:
   migrate:
     build: .
     image: example
-    command: bash -c 'while ! nc -q 1 db 5432 </dev/null; do sleep 1; done && amber db migrate seed'
+    command: bash -c 'while ! nc -q 1 db 5432 </dev/null; do sleep 1; done && bin/amber db migrate seed'
     environment:
       DATABASE_URL: postgres://admin:password@db:5432/example_development
     volumes:
