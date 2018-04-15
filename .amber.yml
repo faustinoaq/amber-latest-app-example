@@ -16,13 +16,12 @@ watch:
     files:
       - "public/**/*"
     commands:
-      - "echo '--:--:-- Watcher    | Reloading client browsers...'"
+      - "echo '--:--:-- Watcher    | Reloading browsers...'"
   js:
     files:
       - "src/assets/javascripts/*.js"
     commands:
       - "cat src/assets/javascripts/*.js > public/dist/main.bundle.js"
-      - "cp lib/amber/assets/js/amber.min.js public/dist/amber.min.js"
   css:
     files:
       - "src/assets/stylesheets/*.css"

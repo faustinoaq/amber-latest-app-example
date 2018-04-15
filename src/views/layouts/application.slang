@@ -27,5 +27,7 @@ html
 
     script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
     script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    - if Amber.env.development?
+      script src="/js/amber_reload.js"
     script src="/dist/amber.min.js"
     script src="/dist/main.bundle.js"
