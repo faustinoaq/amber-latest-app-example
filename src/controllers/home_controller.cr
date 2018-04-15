@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   def boom
     raise "Boom!!!"
   end
-
+  
   def about
     render("about.slang")
   end

@@ -35,3 +35,4 @@ Amber::Server.configure do |app|
     get "/*", Amber::Controller::Static, :index
   end
 end
+# {}

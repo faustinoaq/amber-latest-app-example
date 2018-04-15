@@ -1,26 +1,28 @@
-/**
- * Allows to reload the browser when the server is up again
- */
-function tryReload() {
-    var request = new XMLHttpRequest();
-    request.open('GET', window.location.href, true);
-    request.onreadystatechange = function() {
-        if (request.readyState == 4) {
-            if (request.status == 0) {
-                setTimeout(function() {
-                    tryReload();
-                }, 1000)
-            } else {
-                window.location.reload();
-            }
-        }
-    };
-    request.send();
-}
-
 if ('WebSocket' in window) {
-    (function() {
-        var refreshCSS = function() {
+    (function () {
+        /**
+         * Allows to reload the browser when the server connection is lost
+         */
+        function tryReload() {
+            var request = new XMLHttpRequest();
+            request.open('GET', window.location.href, true);
+            request.onreadystatechange = function () {
+                if (request.readyState == 4) {
+                    if (request.status == 0) {
+                        setTimeout(function () {
+                            tryReload();
+                        }, 1000)
+                    } else {
+                        window.location.reload();
+                    }
+                }
+            };
+            request.send();
+        }
+        /**
+         * Listen server file reload
+         */
+        function refreshCSS() {
             var sheets = [].slice.call(document.getElementsByTagName('link'));
             var head = document.getElementsByTagName('head')[0];
             for (var i = 0; i < sheets.length; ++i) {
@@ -35,16 +37,16 @@ if ('WebSocket' in window) {
             }
         }
         var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = `${protocol}${window.location.host}/client-reload`;
+        var address = protocol + window.location.host + '/client-reload';
         var socket = new WebSocket(address);
-        socket.onmessage = (msg) => {
+        socket.onmessage = function (msg) {
             if (msg.data == 'reload') {
                 window.location.reload();
             } else if (msg.data == 'refreshcss') {
                 refreshCSS();
             }
         };
-        socket.onclose = function() {
+        socket.onclose = function () {
             tryReload();
         }
     })();

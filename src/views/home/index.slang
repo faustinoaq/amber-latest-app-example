@@ -1,7 +1,7 @@
 div
   h2 = t "welcome_message"
   p
-    | This is an amber framework example app to test latest features implemented by
+    | This is an example app to test latest amber features implemented by
     a href="https://github.com/faustinoaq" @faustinoaq
     | in his latest branch
     a href="https://github.com/faustinoaq/amber/tree/latest" faustinoaq/amber
