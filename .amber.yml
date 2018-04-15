@@ -1,0 +1,35 @@
+type: app
+database: pg
+language: slang
+model: granite
+watch:
+  server:
+    files:
+      - "src/**/*.cr"
+      - "src/**/*.slang"
+      - "src/locales/*.yml"
+      - "config/**/*.cr"
+    commands:
+      - crystal build -o bin/example src/example.cr -p --no-color
+      - bin/example
+  client:
+    files:
+      - "public/**/*"
+    commands:
+      - "echo '--:--:-- Watcher    | Reloading client browsers...'"
+  js:
+    files:
+      - "src/assets/javascripts/*.js"
+    commands:
+      - "cat src/assets/javascripts/*.js > public/dist/main.bundle.js"
+      - "cp lib/amber/assets/js/amber.min.js public/dist/amber.min.js"
+  css:
+    files:
+      - "src/assets/stylesheets/*.css"
+    commands:
+      - "cat src/assets/stylesheets/*.css > public/dist/main.bundle.css"
+  images:
+    files:
+      - "src/assets/images/*"
+    commands:
+      - "cp -r src/assets/images public/"

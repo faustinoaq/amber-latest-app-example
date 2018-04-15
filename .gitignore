@@ -1,0 +1,11 @@
+/lib/
+/doc/
+/bin/
+/tmp/
+/.shards/
+/.crystal/
+/node_modules/
+.encryption_key
+production.yml
+.DS_Store
+.env
