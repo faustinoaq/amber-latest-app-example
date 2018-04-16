@@ -9,7 +9,7 @@ div
   div.list-group
     a.list-group-item.list-group-item-action target="_blank" href="/404" Not Found Error (404)
     a.list-group-item.list-group-item-action target="_blank" href="/500" Internal Server Error (500)
-    a.list-group-item.list-group-item-action target="_blank" href="/tasks" Database Eror
+    a.list-group-item.list-group-item-action target="_blank" href="/tasks" Database Error
     a.list-group-item.list-group-item-action target="_blank" href="/about" Template Error (runtime)
   div.alert.alert-warning
     | Compile time errors are not available in this demo.

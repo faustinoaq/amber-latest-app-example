@@ -6,4 +6,4 @@ COPY . /app
 
 RUN shards build
 
-CMD bin/amber watch
+CMD bin/example
