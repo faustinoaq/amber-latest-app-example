@@ -4,6 +4,4 @@ WORKDIR /app
 
 COPY . /app
 
-RUN shards build
-
-CMD bin/example
+CMD shards build --production; bin/amber watch
