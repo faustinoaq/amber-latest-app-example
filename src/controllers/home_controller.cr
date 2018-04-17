@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def boom
-    raise "Boom!!!"
+    raise "Hello!!!"
   end
   
   def about
