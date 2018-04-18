@@ -66,7 +66,11 @@ class TasksController < ApplicationController
 
   def tasks_params
     params.validation do
-      required(:name) { |f| !f.nil? }
+      required(:name) do |field|
+        if this_field = field
+          this_field.size >= 5
+        end
+      end
     end
   end
 end
