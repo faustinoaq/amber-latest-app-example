@@ -69,6 +69,8 @@ class TasksController < ApplicationController
       required(:name) do |field|
         if this_field = field
           this_field.size >= 5
+        else
+          false
         end
       end
     end
