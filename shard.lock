@@ -2,7 +2,7 @@ version: 1.0
 shards:
   amber:
     github: faustinoaq/amber
-    commit: 9287ac5d722db4d66046a23a1b5d0d3c339b012a
+    commit: 2453e5609183534f3636b02644b42e6b12858dc1
 
   amber_router:
     github: amberframework/router
