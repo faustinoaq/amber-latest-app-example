@@ -25,11 +25,11 @@ To start your Amber server:
 
 Now you could visit http://localhost:3000/ from your browser.
 
-Something doesn't work? Please [check Amber troubleshooting](https://amberframework.gitbook.io/amber/troubleshooting).
+Something doesn't work? Please check [Amber troubleshooting](https://amberframework.gitbook.io/amber/troubleshooting).
 
-Using Docker? Please [check Amber Docker guides](https://amberframework.gitbook.io/amber/guides/docker).
+Using Docker? Please check [Amber Docker guides](https://amberframework.gitbook.io/amber/guides/docker).
 
-Ready to run in production? Please [check Amber deployment guides](https://amberframework.gitbook.io/amber/deployment).
+Ready to run in production? Please check [Amber deployment guides](https://amberframework.gitbook.io/amber/deployment).
 
 ## Tests
 
@@ -42,9 +42,9 @@ crystal spec
 ## Contributing
 
 1. Fork it ( https://github.com/faustinoaq/amber-latest-app-example/fork )
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
+2. Create your feature branch ( `git checkout -b my-new-feature` )
+3. Commit your changes ( `git commit -am 'Add some feature'` )
+4. Push to the branch ( `git push origin my-new-feature` )
 5. Create a new Pull Request
 
 ## Contributors
