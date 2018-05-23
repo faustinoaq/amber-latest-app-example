@@ -1,4 +1,4 @@
-# example
+# amber-latest-app-example
 
 [![Amber Framework](https://img.shields.io/badge/using-amberframework-orange.svg)](https://amberframework.org)
 
@@ -6,30 +6,32 @@ This is a project written using [Amber](https://amberframework.org). Enjoy!
 
 ## Getting Started
 
-These instructions will get you a copy of this project up and running on your local machine for development and testing purposes. See [deployment](https://amberframework.gitbook.io/amber/deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of this project up and running on your machine for development and testing purposes.
+
+Please see [deployment](https://amberframework.gitbook.io/amber/deployment) for more notes on deploying the project in production.
 
 ## Prerequisites
 
-This project requires `crystal` and `amber` commands:
+This project requires [Crystal](https://crystal-lang.org/):
 
 [See Crystal installation guide](https://crystal-lang.org/docs/installation/)
-
-[See Amber installation guide](https://amberframework.gitbook.io/amber/guides/installation)
 
 ## Development
 
 To start your Amber server:
 
 1. Install dependencies with `shards install`
-2. Create and migrate your database with `amber db create migrate`. Also see [creating the database](https://amberframework.gitbook.io/amber/guides/create-new-app#creating-the-database).
+2. Build executables with `shards build`
+3. Create and migrate your database with `bin/amber db create migrate`. Also see [creating the database](https://amberframework.gitbook.io/amber/guides/create-new-app#creating-the-database).
+4. Start Amber server with `bin/amber watch`
 
-3. Start Amber endpoint with `amber watch`
+Now you could visit http://localhost:3000/ from your browser.
 
-Now you can visit http://localhost:3000/ from your browser.
+Something doesn't work? Please [check Amber troubleshooting](https://amberframework.gitbook.io/amber/troubleshooting).
 
-Using Docker? Please [check amber docker guides](https://amberframework.gitbook.io/amber/guides/docker).
+Using Docker? Please [check Amber Docker guides](https://amberframework.gitbook.io/amber/guides/docker).
 
-Ready to run in production? Please [check amber deployment guides](https://amberframework.gitbook.io/amber/deployment).
+Ready to run in production? Please [check Amber deployment guides](https://amberframework.gitbook.io/amber/deployment).
 
 ## Tests
 
