@@ -12,9 +12,7 @@ Please see [deployment](https://amberframework.gitbook.io/amber/deployment) for 
 
 ## Prerequisites
 
-This project requires [Crystal](https://crystal-lang.org/):
-
-[See Crystal installation guide](https://crystal-lang.org/docs/installation/)
+This project requires [Crystal](https://crystal-lang.org/), see [installation guide](https://crystal-lang.org/docs/installation/).
 
 ## Development
 
